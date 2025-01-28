@@ -7,8 +7,6 @@ use(BetterErrors::Middleware)
 BetterErrors.application_root = __dir__
 BetterErrors::Middleware.allow_ip!('0.0.0.0/0.0.0.0')
 
-
-
 get("/") do
   <<-HTML
   <style>
@@ -24,12 +22,12 @@ get("/") do
       <a href=\"/dice/1/20\">1d20</a>
       <a href=\"/dice/5/4\">5d4</a></p>
     </div>
-
+  
   <h1>Dice Roll</h1>
-  <p><a href=\"/dice/2/6\">Roll two 6-sided dice</a></p>
-  <p><a href=\"/dice/2/10\">Roll two 10-sided dice</a></p>
-  <p><a href=\"/dice/1/20\">Roll one 20-sided die</a></p>
-  <p><a href=\"/dice/5/4\">Roll five 4-sided dice</a></p>
+  <p><a href=\"/dice/2/6\">* Roll two 6-sided dice</a></p>
+  <p><a href=\"/dice/2/10\">* Roll two 10-sided dice</a></p>
+  <p><a href=\"/dice/1/20\">* Roll one 20-sided die</a></p>
+  <p><a href=\"/dice/5/4\">* Roll five 4-sided dice</a></p>
   HTML
 
 end
